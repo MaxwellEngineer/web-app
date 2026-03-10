@@ -1,14 +1,14 @@
-const btn = document.getElementById("theme-toggle");
+const themeBtn = document.getElementById("theme-toggle");
 
-if (btn) {
-    btn.addEventListener("click", function() {
-        document.body.classList.toggle("dark-theme");
-        if (document.body.classList.contains("dark-theme")) {
-            btn.textContent = "Светлая тема";
-        } else {
-            btn.textContent = "Темная тема";
-        }
-    });
-}
+themeBtn.addEventListener("click", function() {
 
-console.log("Порядок наведен, скрипт готов!");
+    document.body.classList.toggle("dark-theme");
+
+    if (document.body.classList.contains("dark-theme")) {
+        themeBtn.textContent = "Включить светлую тему";
+    } else {
+        themeBtn.textContent = "Включить темную тему";
+    }
+    
+    console.log("Тема изменена!");
+});
