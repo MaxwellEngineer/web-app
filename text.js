@@ -1,1 +1,13 @@
-console.log("Скрипт успешно подключен!");
+const btn = document.getElementById("theme-toggle");
+
+btn.addEventListener("click", function() {
+    document.body.classList.toggle("dark-theme");
+
+    if (document.body.classList.contains("dark-theme")) {
+        btn.textContent = "Светлая тема";
+    } else {
+        btn.textContent = "Темная тема";
+    }
+});
+
+console.log("Скрипт переключения темы готов!");
